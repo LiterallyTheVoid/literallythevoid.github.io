@@ -1,11 +1,10 @@
-/**
- * Adds a navigation bar to the page. Much more reusable.
- */
 document.addEventListener("DOMContentLoaded", () => {
-  // Get the header element
+  renderNav();
+});
+
+function renderNav() {
   const header = document.querySelector("h1.header");
 
-  // Define the navigation HTML
   const navHTML = `
     <nav class="nav text-center">
       <a href="/">home</a>
@@ -14,6 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
   `;
 
-  // Insert the navigation before the header
   header.insertAdjacentHTML("afterend", navHTML);
-});
+}
