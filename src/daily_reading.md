@@ -1,6 +1,6 @@
-## Daily reading with bash
+## Daily reading with Bash
 
-I have a few sites that I like to visit every day to see if anything interesting was posted. I used a bookmarks folder where I could open all tabs at once, but managing the bookmarks was a bit of a pain, so I created a small bash script instead. It's pretty basic. All it does is open all the sites that could have something interesting.
+I have a few sites that I like to visit every day to see if anything interesting was posted. I used a bookmarks folder where I could open all tabs at once, but managing the bookmarks was a bit of a pain, so I created a small Bash script instead. It's pretty basic. All it does is open all the sites that could have something interesting.
 
 The script below lives in `~/bin/`.
 
