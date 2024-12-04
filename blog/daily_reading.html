@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Literally the Void</title>
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <h1 class="header text-center">Literally the Void</h1>
+
+    <article class="content">
+      <h2>Daily reading with bash</h2>
+
+      <p>
+        I have a few sites that I like to visit every day to see if anything
+        interesting was posted. I used a bookmarks folder where I could open all
+        tabs at once, but managing the bookmarks was a bit of a pain, so I
+        created a small bash script instead. It's pretty basic. All it does is
+        open all the sites that could have something interesting.
+      </p>
+
+      <p>The script below lives in <code>~/bin/</code>.</p>
+
+      <pre>
+        <code class="bash">
+          #!/usr/bin/env bash
+
+          open https://news.ycombinator.com/news;
+          open https://animationobsessive.substack.com/;
+          open https://lithub.com/category/lit-hub-daily/;
+          # ... this is an abbreviated list
+          # ... open whatever else you want
+
+          exit 0;
+        </code>
+      </pre>
+
+      <p>
+        Why does my script start with a comma?
+        <a href="https://rhodesmill.org/brandon/2009/commands-with-comma/"
+          >I read this article</a
+        >
+        and it didn't seem like a terrible idea. I get tab completion, and I can
+        see all my other functions.
+      </p>
+
+      <p>
+        After opening, I can store relevant articles with
+        <a href="https://readwise.io/read">Readwise Reader</a> for later.
+      </p>
+
+      <p>
+        When I first got into programming, I didn't need to know all that much
+        about bash or the command line. I was able to do everything with basic,
+        rote commands or a GUI. But sometime maturing as a programmer means
+        accepting that the old heads were right--you should just be using bash.
+      </p>
+    </article>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
