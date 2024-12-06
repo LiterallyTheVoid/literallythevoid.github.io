@@ -10,6 +10,8 @@ function renderNav() {
       <a href="/">home</a>
       <p class="mx-05">|</p>
       <a href="/blog">blog</a>
+      <p class="mx-05">|</p>
+      <a href="/now.html">now</a>
     </nav>
   `;
 
