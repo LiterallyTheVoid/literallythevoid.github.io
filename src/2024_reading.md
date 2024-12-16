@@ -60,3 +60,7 @@ A wonderful retelling of _The Fall of the House of Usher_. This novel has a
 character that identifies with "va/van" pronouns. This clever device points out
 the notion that gendered pronouns aren't inherent and that they/them singular
 pronouns are just as "correct" as anything else.
+
+### [_Waves_](https://www.simonandschuster.com/books/Waves/Ingrid-Chabbert/9781684153466) by Ingrid Chabbert, Illustrated by Carole Maurel
+
+### - [_The Vegetarian_](https://en.wikipedia.org/wiki/The_Vegetarian) by Han Kang
