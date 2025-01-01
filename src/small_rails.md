@@ -1,20 +1,22 @@
 ## Rails for everything
 
-_Published: _
+_Published: 2025-01-01_
 
-With a little extra spare time on my hands--and the release of Rails 8--I decided to spin up a new Rails app. After a few days of playing, it's clear that Rails is better than ever. It's the first tool you should reach for when building an application. And if it's your first time using Rails, now is the best time to start.
+After spending part of my holiday building and deploying a new Rails 8 application, It's clearer than ever that Rails is awesome, and it's especially great for small projects with a single developer.
 
-### Getting started
+### Guide is good
 
-The latest [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html#Rails-philosophy) guide is really excellent. There's a bit of hand waving around installing Ruby (more on that later). But if you follow it start to end, you'll have a Rails app **in production**. The magic of seeing something live on the internet for the first time is something I'll never forget. And this isn't just `hello world`. Your app will have authentication, caching, rich text, continuous integration, and a database. That's a real application.
+The latest [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html#Rails-philosophy) guide is really excellent. There's a bit of hand waving around installing Ruby (which is still more difficult than it needs to be). But if you follow it start to finish, you'll have a Rails app **in production**. And it isn't just `hello world`. Your app will have authentication, caching, rich text, continuous integration, and a database. That's a real application.
 
-If you're brand new to Rails, this guide will get you up to speed.
+If you're brand new to Rails, the guide is the best place to start.
 
-### SQLite is all you need (for now)
+### SQLite is all you need
 
-SQlite is a great tool, but its focus on backwards compatibility means that it isn't exactly ideal for a production database out of the box. You [used to have to add some gems](https://fractaledmind.github.io/2024/04/15/sqlite-on-Rails-the-how-and-why-of-optimal-performance/) to actually get it ready to perform. However [Rails 8](https://fractaledmind.github.io/2024/10/16/sqlite-supercharges-Rails/) deals with that for you, and SQLite is ready for production.
+SQlite is a great tool, but its focus on backwards compatibility means that it wasn't ideal for a production database out of the box. You [had to add some gems](https://fractaledmind.github.io/2024/04/15/sqlite-on-Rails-the-how-and-why-of-optimal-performance/) to get it ready to perform. However [Rails 8](https://fractaledmind.github.io/2024/10/16/sqlite-supercharges-Rails/) deals with that for you, and SQLite is ready for production.
 
-I'm a Rails engineer, but I know my weaknesses. The idea of standing up a new production database is a bit frightening, as it probably should be. This is something I am more than happy to let Rails do for me.
+Now that you SQLite is a more robust choice, you don't have to worry about spinning up a PostgreSQL server. On top of that, with tools like [solid cache](https://dev.37signals.com/solid-cache/) you don't need to stand up redis either.
+
+Everything is running under Rails and within SQLite. Superb.
 
 ### Easy CI
 
@@ -24,32 +26,20 @@ Aside from it being really cool to have CI with no effort, 2000 minutes of run t
 
 ### Authentication generator
 
-[Devise](https://github.com/heartcombo/devise) is the canonical authentication gem. But it hides a lot of complexity and it's not exactly easy to configure correct, especially if you are a beginner.
+[Devise](https://github.com/heartcombo/devise) is the canonical authentication gem. But it hides a lot of complexity and it's not exactly easy to configure correctly, especially for a beginner.
 
 Rails 8 adds a new authentication generator. It add a simple sign in flow for existing users. All you need to do is add a user via the Rails console and boom. You can log in.
 
-The generated code is pretty minimal and easy to read about, and it is begging for a lot additional features.
-
-### AI can be really helpful
-
-Because Rails is driven by a [convention over configuration](https://rubyonrails.org/doctrine#convention-over-configuration) doctrine, I think all the Rails questions on the internet are extremely legible to LLMs. Beginner questions have already been asked and answered (probably more than once).
-
-That means if you run into an issue building a Rails app, LLMs are a huge boon to a solo developer.
+The generated code is pretty minimal and easy to read about.
 
 ### Easy and fast deploys with Kamal
 
-Like databases, I am more than happy to leave deploys to my very smart friends in the ops team. To deploy a new Rails app, I just needed to update a few items in `deploy.yml` follow a few directions, and I had an app live! With SSL!
+I am more than happy to leave deploys to my very smart friends in the ops team. To deploy a new Rails 8 app, I just needed to update a few items in `deploy.yml`, follow a few directions, and I had an app live! With SSL!
 
 Honestly it took less time to get a web app up than it took me to get SSL on a Github page.
 
-CI + easy deploys might be the best part about Rails 8. Even from the getting started guide, it encourages best practices.
+CI + easy deploys might be the best part about Rails 8. Even just using the getting started guide, it encourages best practices.
 
-### Where I still want more
+### Conclusion
 
-I know this isn't Rails' fault, but installing Ruby (especially on windows) is a pain. It should be easy.
-
-The getting started guide is great, the rest of the Rails documentation needs some love. They seem to be aware and working on it.
-
-I want more from authentication. DHH isn't interested in building authentication/authorization for every use case, and I get that. I would love to see a simple admin/user authorization scheme along with a registration controller. Ideally I would be able to make a Hacker News clone with no effort.
-
-All that said, you should just use Rails for everything.
+[Rails is not dead](https://israilsdead.com/); It's better than ever. Try using it to make something new this year.
